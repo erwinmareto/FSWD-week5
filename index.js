@@ -60,14 +60,11 @@ function registerUser() {
   criteriaPromise
     .then((result) => {
       dataList.push(new User(username, age, allowance));
-      console.log(result);
-      console.log(dataList);
       setTimeout(showMessage(result, false), 3000);
       
       showData();
     })
     .catch((error) => {
-      // location.reload();
       showMessage(error, true);
     });
 
